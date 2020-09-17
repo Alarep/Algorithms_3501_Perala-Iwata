@@ -1,4 +1,5 @@
-#University of Minnesota Morris Algorithms Lab 5
+# University of Minnesota Morris Algorithms Lab 5
+##### Authors: Jack Perala and Machi Iwata
 
 - [Explanation of the Algorithm](#explanation-of-the-algorithm)
 - [Why the Algorithm is Correct](#why-the-algorithm-is-correct)
@@ -8,20 +9,20 @@
 ____
 
 
-##Explanation of the Algorithm
+## Explanation of the Algorithm
 Placeholder
 
-##Why the Algorithm is Correct
+## Why the Algorithm is Correct
 Placeholder
 
-##Test Data
+## Test Data
 ```
 Insert code here
 ```
-##Efficiency of the Algorithm
+## Efficiency of the Algorithm
 Placeholder
 
-##Citations
+## Citations
 Here is the list of citations we used for this lab along with a brief description of their use.
 >https://www.youtube.com/watch?time_continue=351&v=o1olHmxDzTw&feature=emb_logo&ab_channel=GeeksforGeeks
 ```
