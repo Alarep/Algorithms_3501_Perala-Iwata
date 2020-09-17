@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -20,17 +21,22 @@ public class Main {
                 };
 
                 // Or use scan to get programmers and companies preference */
+
+    }
+
+    static void linkAndMatch(){
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Enter the length of the array for companies:");
         int length = scan.nextInt();
-        int [] compPreferenceA = new int[length];
-        int [] compPreferenceB = new int[length];
+        ArrayList<Company> companies = new ArrayList<>();
+        ArrayList<Programmer> programmers = new ArrayList<>();
 
         System.out.println("Enter the elements of the array for company A's preference:");
 
         for(int i=0; i<length; i++ ) {
-            compPreferenceA[i] = scan.nextInt();
+            int companyPreference = scan.nextInt();
+            companies.add(i, companyPreference);
         }
 
         System.out.println("Enter the elements of the array for company B's preference:");
@@ -43,19 +49,5 @@ public class Main {
 
         System.out.println(CompanyA);
         System.out.println(CompanyB);
-
-
-
-
-
-
-        // preference(companyPreference, programmerPreference);
-
-
-
-    }
-
-    static void linkAndMatch(){
-        Scanner sc = new Scanner(System.in);
     }
 }
