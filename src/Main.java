@@ -24,30 +24,20 @@ public class Main {
 
     }
 
-    static void linkAndMatch(){
+    static void linkAndMatch(int n){
+
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Enter the length of the array for companies:");
-        int length = scan.nextInt();
-        ArrayList<Company> companies = new ArrayList<>();
-        ArrayList<Programmer> programmers = new ArrayList<>();
+        // User input to determine the number of companies and programmers.
+        System.out.println("Please enter the number of companies and programmers to be paired.");
+        n = scan.nextInt();
 
-        System.out.println("Enter the elements of the array for company A's preference:");
+        ArrayList<Character> companies = new ArrayList<>();
+        ArrayList<Integer> programmers = new ArrayList<>();
 
-        for(int i=0; i<length; i++ ) {
-            int companyPreference = scan.nextInt();
-            companies.add(i, companyPreference);
+        char[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
+        for(int i = 0; i < n; i++ ) {
+            companies.add(i, alphabet[i]);
         }
-
-        System.out.println("Enter the elements of the array for company B's preference:");
-
-        for(int i=0; i<length; i++ ) {
-            compPreferenceB[i] = scan.nextInt();
-        }
-        String CompanyA = Arrays.toString(compPreferenceA);
-        String CompanyB = Arrays.toString(compPreferenceB);
-
-        System.out.println(CompanyA);
-        System.out.println(CompanyB);
     }
 }
