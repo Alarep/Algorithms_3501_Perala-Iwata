@@ -32,3 +32,7 @@ Used for Scanner.
 ```
 Video for visualization and concepts.
 ```
+>https://stackoverflow.com/questions/17575840/better-way-to-generate-array-of-all-letters-in-the-alphabet
+```
+Used to find a way to implement an alphabet more effectively.
+```
