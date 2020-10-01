@@ -147,3 +147,7 @@ One of the websites explaining how to implement the algorithm.
 ```
 One of the websites explaining how to implement the algorithm.
 ```
+>https://math.stackexchange.com/questions/1410898/worst-case-for-the-stable-marriage-problem
+```
+One of the websites explaining the efficiency of the algorithm.
+```
