@@ -1,8 +1,17 @@
+
+/*
+We borrowed heavily from these websites
+https://algorithms.tutorialhorizon.com/stable-marriage-problem-gale-shapley-algorithm-java/
+https://github.com/ConnorD/Gale-Shapley/blob/master/StableMatching.java
+https://www.sanfoundry.com/java-program-gale-shapley-algorithm/
+After multiple attempts without any productive results we had to turn to google to
+figure out how to implement this idea.
+The biggest downfall at this point is that there is not a good way to quickly test different cases
+and it requires changing values manually.
+ */
 public class Main {
 
     public static void main(String[] args) {
-
-        char[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
 
         // Programmers for hire
         String[] programmers = {"1", "2", "3", "4", "5"};
@@ -10,7 +19,7 @@ public class Main {
         // Companies hiring
         String[] companies = {"A", "B", "C", "D", "E"};
 
-        // Programmer preferences
+        // sub-arrays for choosing the preferred company of each programmer.
         String[][] programmerPreferrence = {
                 {"B", "A", "C", "D", "E"}, // Programmer preference 1
                 {"E", "C", "A", "B", "D"}, // Programmer preference 2
@@ -19,7 +28,7 @@ public class Main {
                 {"A", "D", "E", "C", "B"}
         };
 
-        // Company preference
+        // sub-arrays for choosing the preferred programmer of each company.
         String[][] companyPreferrence = {
                 {"1", "2", "3", "4", "5"}, // Company A preference
                 {"4", "2", "3", "5", "4"}, // Company B preference
