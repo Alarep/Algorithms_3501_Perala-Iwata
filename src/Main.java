@@ -31,7 +31,8 @@ public class Main {
         new Main(programmers, companies, programmerPreferrence, companyPreferrence);
     }
 
-    private int N, engagedCount;
+    private int N;
+    private int hiringCount;
     final private String[][] programmerPreference;
     final private String[][] companyPreference;
     final private String[] programmers;
@@ -42,7 +43,7 @@ public class Main {
     /** Constructor **/
     public Main(String[] programmer, String[] company, String[][] programmerPreferrence, String[][] companyPreferrence){
         N = programmerPreferrence.length;
-        engagedCount = 0;
+        hiringCount = 0;
         programmers = programmer;
         companies = company;
         programmerPreference = programmerPreferrence;
@@ -53,24 +54,24 @@ public class Main {
     }
 
     private void linkAndMatch() {
-        while (engagedCount < N) {
-            int free;
-            for (free = 0; free < N; free++)
-                if (!programmerMatch[free])
+        while (hiringCount < N) {
+            int unhired;
+            for (unhired = 0; unhired < N; unhired++)
+                if (!programmerMatch[unhired])
                     break;
 
-            for (int i = 0; i < N && !programmerMatch[free]; i++) {
-                int index = womenIndexOf(programmerPreference[free][i]);
+            for (int i = 0; i < N && !programmerMatch[unhired]; i++) {
+                int index = companyFind(programmerPreference[unhired][i]);
                 if (companyMatch[index] == null) {
-                    companyMatch[index] = programmers[free];
-                    programmerMatch[free] = true;
-                    engagedCount++;
+                    companyMatch[index] = programmers[unhired];
+                    programmerMatch[unhired] = true;
+                    hiringCount++;
                 } else {
                     String currentPartner = companyMatch[index];
-                    if (morePreference(currentPartner, programmers[free], index)) {
-                        companyMatch[index] = programmers[free];
-                        programmerMatch[free] = true;
-                        programmerMatch[menIndexOf(currentPartner)] = false;
+                    if (preference(currentPartner, programmers[unhired], index)) {
+                        companyMatch[index] = programmers[unhired];
+                        programmerMatch[unhired] = true;
+                        programmerMatch[programmerFind(currentPartner)] = false;
                     }
                 }
             }
@@ -80,25 +81,25 @@ public class Main {
             System.out.println(companyMatch[i] +" "+ companies[i]);
         }
     }
-    /** function to check if women prefers new partner over old assigned partner **/
-    private boolean morePreference(String curPartner, String newPartner, int index) {
+
+    private boolean preference(String currentHire, String newHire, int index) {
         for (int i = 0; i < N; i++) {
-            if (companyPreference[index][i].equals(newPartner))
+            if (companyPreference[index][i].equals(newHire))
                 return true;
-            if (companyPreference[index][i].equals(curPartner))
+            if (companyPreference[index][i].equals(currentHire))
                 return false;
         }
         return false;
     }
-    /** get men index **/
-    private int menIndexOf(String str) {
+
+    private int programmerFind(String str) {
         for (int i = 0; i < N; i++)
             if (programmers[i].equals(str))
                 return i;
         return -1;
     }
-    /** get women index **/
-    private int womenIndexOf(String str) {
+
+    private int companyFind(String str) {
         for (int i = 0; i < N; i++)
             if (companies[i].equals(str))
                 return i;
