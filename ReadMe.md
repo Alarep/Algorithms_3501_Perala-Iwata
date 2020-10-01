@@ -125,7 +125,8 @@ where there are multiple matching preferences.
 5 E
 ```
 ## Efficiency of the Algorithm
-Placeholder
+The efficiency of the algorithm in the worst case is n(n-1)+1.
+There is no company or programmer that don't get preference from each other. When every programmer and company get paired up with each other, the algorithm stops. In the worst case, every programer gets paired up with every man except for one programmer (n -1). And when the last programmer gets paired up, that is the end of the algorithm. Therefore, if we combine all these things, it would be n(n-1)+1 in the worst case.
 
 ## Citations
 Here is the list of citations we used for this lab along with a brief description of their use.
