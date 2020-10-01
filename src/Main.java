@@ -49,7 +49,6 @@ public class Main {
     final private String[] companyMatch;
     final private boolean[] programmerMatch;
 
-    /** Constructor **/
     public Main(String[] programmer, String[] company, String[][] programmerPreferrence, String[][] companyPreferrence){
         N = programmerPreferrence.length;
         hiringCount = 0;
