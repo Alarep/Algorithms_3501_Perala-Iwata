@@ -25,8 +25,9 @@ have the same preferences the algorithm will find a best fit for available progr
 position for whoever is left over.
 
 ## Test Data
-This is a set of # different testing scenarios. Included is a short and easily assignable test case, a standard
-randomly chosen test case, and an unideal case where there are multiple matching preferences.
+This is a set of three different testing scenarios that cover the spread of three usual cases.
+Included is a short and easily assignable test case, a standard randomly chosen test case, and an unideal case 
+where there are multiple matching preferences.
 > Short and easily assignable test data.
 ```
         // Programmers for hire
